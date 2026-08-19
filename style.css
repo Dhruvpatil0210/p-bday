@@ -1,0 +1,719 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background: #eee6ff;
+}
+
+
+/* ========================= */
+/* PAGE */
+/* ========================= */
+
+.page {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* ========================= */
+/* FIRST PAGE */
+/* ========================= */
+
+#page1 {
+    background:
+        linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.5) 2px,
+            transparent 2px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.5) 2px,
+            transparent 2px
+        ),
+        #eee6ff;
+
+    background-size: 70px 70px;
+}
+
+.birthday-intro {
+    width: 90%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: pageAppear 1.2s ease;
+}
+
+
+/* ========================= */
+/* CAKE */
+/* ========================= */
+
+.cake {
+    font-size: clamp(90px, 13vw, 150px);
+
+    margin-bottom: 15px;
+
+    animation: cakeFloat 3s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 10px 10px rgba(91, 70, 127, 0.2)
+        );
+}
+
+
+/* ========================= */
+/* SMALL TEXT */
+/* ========================= */
+
+.little-text {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(20px, 3vw, 28px);
+
+    color: #8065a3;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================= */
+/* HAPPY BIRTHDAY */
+/* ========================= */
+
+.happy-title {
+    font-family: "Titan One", sans-serif;
+
+    font-size: clamp(42px, 8vw, 90px);
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    text-shadow:
+        4px 4px #5b467f,
+        -3px 3px #5b467f,
+        3px -3px #5b467f,
+        -3px -3px #5b467f,
+        5px 8px #5b467f;
+}
+
+
+/* ========================= */
+/* PALAK */
+/* ========================= */
+
+.name-title {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 9vw, 100px);
+
+    color: #9b6cff;
+
+    margin-top: 10px;
+
+    text-shadow:
+        2px 2px white,
+        4px 4px #5b467f;
+}
+
+
+/* ========================= */
+/* OPEN BUTTON */
+/* ========================= */
+
+.open-button {
+    margin-top: 35px;
+
+    padding: 15px 32px;
+
+    border: 3px solid #5b467f;
+
+    border-radius: 50px;
+
+    background: #9b6cff;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #5b467f;
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow: 0 10px 0 #5b467f;
+}
+
+.open-button:active {
+    transform: translateY(3px);
+
+    box-shadow: 0 2px 0 #5b467f;
+}
+
+
+/* ========================= */
+/* SECOND PAGE */
+/* ========================= */
+
+#page2 {
+    background:
+        linear-gradient(
+            135deg,
+            #eee6ff,
+            #e2d4ff,
+            #f4efff
+        );
+
+    padding: 20px;
+}
+
+
+/* ========================= */
+/* BIRTHDAY CARD */
+/* ========================= */
+
+.birthday-card {
+    width: 90%;
+    max-width: 720px;
+
+    background: #fcfaff;
+
+    border: 4px solid #5b467f;
+
+    border-radius: 25px;
+
+    padding: 45px 50px 50px;
+
+    box-shadow:
+        10px 10px 0 #5b467f,
+        0 20px 40px rgba(91, 70, 127, 0.18);
+
+    animation: cardAppear 1s ease;
+}
+
+
+/* ========================= */
+/* CARD DECORATION */
+/* ========================= */
+
+.card-decoration {
+    font-size: 25px;
+
+    letter-spacing: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================= */
+/* CARD TITLE */
+/* ========================= */
+
+.birthday-card h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(40px, 6vw, 65px);
+
+    color: #8b5cf6;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================= */
+/* MESSAGE */
+/* ========================= */
+
+.message {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #665578;
+}
+
+.message p {
+    margin-bottom: 15px;
+}
+
+.message .ending {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 25px;
+
+    color: #9b6cff;
+
+    margin-top: 25px;
+}
+
+
+/* ========================= */
+/* CELEBRATE BUTTON */
+/* ========================= */
+
+.celebrate-button {
+    margin-top: 20px;
+
+    padding: 16px 30px;
+
+    border: 3px solid #5b467f;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #a78bfa
+        );
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 0 #5b467f,
+        0 10px 20px rgba(139, 92, 246, 0.25);
+
+    transition: 0.3s;
+}
+
+.celebrate-button:hover {
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 10px 0 #5b467f,
+        0 15px 30px rgba(139, 92, 246, 0.35);
+}
+
+.celebrate-button:active {
+    transform: translateY(3px);
+}
+
+
+/* ========================= */
+/* STARS */
+/* ========================= */
+
+.star {
+    position: absolute;
+
+    color: #9b6cff;
+
+    font-size: 35px;
+
+    animation: starFloat 3s ease-in-out infinite;
+}
+
+.star1 {
+    top: 12%;
+    left: 12%;
+}
+
+.star2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.star3 {
+    bottom: 18%;
+    left: 18%;
+    animation-delay: 1s;
+}
+
+.star4 {
+    bottom: 12%;
+    right: 12%;
+    animation-delay: 1.5s;
+}
+
+.star5 {
+    top: 45%;
+    right: 7%;
+    animation-delay: 2s;
+}
+
+
+/* ========================= */
+/* CONFETTI */
+/* ========================= */
+
+#confetti-container {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+.confetti {
+    position: absolute;
+
+    top: -30px;
+
+    width: 10px;
+    height: 20px;
+
+    border-radius: 2px;
+
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(900deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ========================= */
+/* F1 CARS */
+/* ========================= */
+
+#f1-container {
+    position: fixed;
+
+    left: 0;
+    bottom: 12%;
+
+    width: 100%;
+    height: 180px;
+
+    pointer-events: none;
+
+    z-index: 110;
+
+    display: none;
+}
+
+#f1-container.racing {
+    display: block;
+}
+
+.f1-car {
+    position: absolute;
+
+    left: -180px;
+
+    font-size: 75px;
+}
+
+.car1 {
+    top: 0;
+}
+
+.car2 {
+    top: 55px;
+}
+
+.car3 {
+    top: 110px;
+}
+
+.racing .car1 {
+    animation:
+        raceCar
+        2s
+        linear
+        forwards;
+}
+
+.racing .car2 {
+    animation:
+        raceCar
+        2.3s
+        0.2s
+        linear
+        forwards;
+}
+
+.racing .car3 {
+    animation:
+        raceCar
+        2.6s
+        0.4s
+        linear
+        forwards;
+}
+
+@keyframes raceCar {
+
+    0% {
+        left: -180px;
+
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: 110%;
+
+        transform: scaleX(-1);
+    }
+}
+
+
+/* ========================= */
+/* CELEBRATION MESSAGE */
+/* ========================= */
+
+#celebration-message {
+    position: fixed;
+
+    top: 42%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    z-index: 200;
+
+    pointer-events: none;
+
+    text-align: center;
+
+    color: white;
+
+    text-shadow:
+        4px 4px #5b467f,
+        0 0 20px #8b5cf6,
+        0 0 40px #8b5cf6;
+}
+
+#celebration-message span {
+    display: block;
+
+    font-family: "Titan One", sans-serif;
+
+    font-size: clamp(40px, 9vw, 100px);
+}
+
+#celebration-message small {
+    display: block;
+
+    font-size: 35px;
+
+    margin-top: 10px;
+}
+
+#celebration-message.show {
+    animation:
+        celebration
+        3s
+        ease
+        forwards;
+}
+
+@keyframes celebration {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity: 0;
+    }
+
+    20% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.2);
+
+        opacity: 1;
+    }
+
+    40% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    80% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(0.8);
+
+        opacity: 0;
+    }
+}
+
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes cakeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(2deg);
+    }
+}
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(15deg);
+    }
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .happy-title {
+        letter-spacing: 1px;
+    }
+
+    .birthday-card {
+        padding: 30px 22px 35px;
+
+        box-shadow:
+            6px 6px 0 #5b467f;
+    }
+
+    .message {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .celebrate-button {
+        font-size: 15px;
+
+        padding: 14px 22px;
+    }
+
+    .star {
+        font-size: 25px;
+    }
+
+    .f1-car {
+        font-size: 55px;
+    }
+}
